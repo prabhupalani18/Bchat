@@ -4,7 +4,7 @@ WORKDIR /workspace
 COPY pom.xml mvnw ./
 COPY .mvn .mvn
 COPY src src
-RUN mvn clean package -DskipTests
+RUN ["mvn", "clean", "package", "-DskipTests"]
 
 # Run stage - minimal JRE
 FROM eclipse-temurin:17-jre
