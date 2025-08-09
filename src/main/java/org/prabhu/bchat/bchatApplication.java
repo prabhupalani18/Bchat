@@ -5,10 +5,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
+@ConfigurationProperties(prefix = "webhook")
 public class BchatApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(BchatApplication.class, args);
     }
-
 }
